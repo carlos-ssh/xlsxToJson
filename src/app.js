@@ -7,6 +7,6 @@ const app = express();
 
 app.use(morgan("dev"));
 app.use(express.json());
-app.use("api", createJsonRoute);
+app.use('/api', createJsonRoute);
 
 export default app;

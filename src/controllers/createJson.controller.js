@@ -1,8 +1,13 @@
 const createJson = async (req, res) => {
-  console.log(req);
-  console.log(res);
+  const file = await req.body;
 
-  return { res, req };
+  console.log('This is the file: ', file);
+
+  if (!file) {
+    return { error: "The file is required" };
+  }
+
+  return file;
 };
 
 export default createJson;
